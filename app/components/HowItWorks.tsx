@@ -61,7 +61,7 @@ export function HowItWorks() {
               <span>discord - swiggy in discord</span>
             </div>
             <Image
-              src="/screenshot-studio-1785175850264.webp"
+              src="/ss.webp"
               alt="The Swiggy bot running inside a Discord server - a chat showing logged-in Swiggy orders"
               width={1440}
               height={1080}
