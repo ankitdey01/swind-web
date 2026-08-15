@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Swind Web 🛒
+
+**Order groceries. Stay in the chat.**
+
+Swind Web is the landing page for Swiggy In Discord - a Discord bot that brings Swiggy Instamart directly into your Discord server. No more tab-switching or leaving your conversations to order groceries.
+
+🔗 **Live Site**: [swiggyinsidediscord.tech](https://swiggyinsidediscord.tech)  
+🤖 **Bot Invite**: [Add to Discord](https://discord.com/oauth2/authorize?client_id=1501958519333720216)  
+💬 **Support**: [Join our Discord](https://discord.gg/sWSP3g5xKM)
+
+---
+
+## What is Swiggy In Discord?
+
+Swiggy In Discord is a bot that lets you order from Swiggy Instamart using slash commands - right from your Discord server. Link your Swiggy account once, and you're set.
+
+**Key Features:**
+- 🔗 One-time Swiggy account linking
+- ⚡ Order groceries with slash commands
+- 🛡️ Secure authentication
+- 🎯 No app switching needed
+- ⏱️ 2-minute setup
+
+---
+
+## Tech Stack
+
+- **Framework**: [Next.js 16.3](https://nextjs.org) with App Router
+- **Language**: TypeScript
+- **UI**: React 19
+- **Styling**: Custom CSS
+- **Deployment**: Vercel-ready
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 20+
+- npm, yarn, pnpm, or bun
 
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ankitdey01/swind-web.git
+cd swind-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server on port 3000 |
+| `npm run build` | Build for production |
+| `npm start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This site is optimized for deployment on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ankitdey01/swind-web)
+
+Or deploy manually:
+```bash
+npm run build
+npm start
+```
+
+---
+
+## Contributing
+
+This is a personal project, but suggestions and bug reports are welcome! Feel free to:
+- Open an issue for bugs or feature requests
+- Join our [Discord community](https://discord.gg/sWSP3g5xKM) for discussions
+
+---
+
+## License
+
+Private project © 2026 Ankit Dey
+
+---
+
+## Support
+
+- 📧 Email: support@swiggyinsidediscord.tech
+- 💬 Discord: [Join support server](https://discord.gg/sWSP3g5xKM)
+
+---
+
+**Made with ❤️ for the Discord community**

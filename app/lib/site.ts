@@ -1,7 +1,7 @@
 ﻿export const LINKS = {
   invite:
     "https://discord.com/oauth2/authorize?client_id=1501958519333720216",
-  support: "https://discord.gg/KdTYGtXAu",
+  support: "https://discord.gg/sWSP3g5xKM",
   email: "support@swiggyinsidediscord.tech",
 } as const;
 

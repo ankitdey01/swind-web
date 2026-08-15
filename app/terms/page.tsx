@@ -40,7 +40,7 @@ export default function TermsPage() {
         },
         {
           title: "9. Contact",
-          body: <p>Questions about these Terms can be raised in the <a href="https://discord.gg/KdTYGtXAu" target="_blank" rel="noreferrer">support Discord server</a> or via the contact details listed on the Bot&apos;s website.</p>,
+          body: <p>Questions about these Terms can be raised in the <a href="https://discord.gg/sWSP3g5xKM" target="_blank" rel="noreferrer">support Discord server</a> or via the contact details listed on the Bot&apos;s website.</p>,
         },
       ]}
     />

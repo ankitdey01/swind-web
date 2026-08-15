@@ -36,7 +36,7 @@ export default function PrivacyPage() {
         },
         {
           title: "8. Contact",
-          body: <p>Questions, data deletion requests, or concerns can be raised in the <a href="https://discord.gg/KdTYGtXAu" target="_blank" rel="noreferrer">support Discord server</a> or via the contact listed on the Bot&apos;s website.</p>,
+          body: <p>Questions, data deletion requests, or concerns can be raised in the <a href="https://discord.gg/sWSP3g5xKM" target="_blank" rel="noreferrer">support Discord server</a> or via the contact listed on the Bot&apos;s website.</p>,
         },
       ]}
     />
