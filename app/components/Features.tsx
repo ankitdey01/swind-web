@@ -1,5 +1,4 @@
-﻿import { Reveal } from "./Reveal";
-import {
+﻿import {
   ShieldIcon,
   CartIcon,
   MessageIcon,
@@ -38,16 +37,16 @@ export function Features() {
   return (
     <section id="features" className="section section--soft">
       <div className="container">
-        <Reveal className="section-head section-head--center">
+        <div className="section-head section-head--center">
           <h2>Everything, in the one place you already hang out.</h2>
           <p>
             No new apps to download, no tabs to juggle. Just a bot that brings
             Swiggy to your community.
           </p>
-        </Reveal>
+        </div>
 
         <div className="feat-grid">
-          <Reveal className="feat feat--wide" delay={60}>
+          <div className="feat feat--wide">
             <div className="feat__icon">
               <ShieldIcon />
             </div>
@@ -70,9 +69,9 @@ export function Features() {
                 </div>
               ))}
             </div>
-          </Reveal>
+          </div>
 
-          <Reveal className="feat feat--narrow" delay={120}>
+          <div className="feat feat--narrow">
             <div className="feat__icon">
               <MessageIcon />
             </div>
@@ -94,9 +93,9 @@ export function Features() {
                 ))}
               </div>
             </div>
-          </Reveal>
+          </div>
 
-          <Reveal className="feat feat--narrow" delay={60}>
+          <div className="feat feat--narrow">
             <div className="feat__icon">
               <CartIcon />
             </div>
@@ -121,9 +120,9 @@ export function Features() {
                 </div>
               ))}
             </div>
-          </Reveal>
+          </div>
 
-          <Reveal className="feat feat--wide" delay={120}>
+          <div className="feat feat--wide">
             <div className="feat__icon">
               <UsersIcon />
             </div>
@@ -148,7 +147,7 @@ export function Features() {
                 Sneha is ordering from #groceries
               </span>
             </div>
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>

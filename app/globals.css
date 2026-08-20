@@ -1300,41 +1300,29 @@ code {
     }
 }
 
-/* entrance stagger for hero + mock messages */
-.rise {
+/* entrance stagger for discord mockup messages */
+.dc-msgs .rise {
     opacity: 0;
     animation: rise-in 640ms var(--ease-out) forwards;
 }
 
-.rise--1 {
-    animation-delay: 60ms;
-}
-
-.rise--2 {
-    animation-delay: 140ms;
-}
-
-.rise--3 {
-    animation-delay: 220ms;
-}
-
-.rise--4 {
+.dc-msgs .rise--4 {
     animation-delay: 300ms;
 }
 
-.rise--5 {
+.dc-msgs .rise--5 {
     animation-delay: 400ms;
 }
 
-.rise--6 {
+.dc-msgs .rise--6 {
     animation-delay: 520ms;
 }
 
-.rise--7 {
+.dc-msgs .rise--7 {
     animation-delay: 640ms;
 }
 
-.rise--8 {
+.dc-msgs .rise--8 {
     animation-delay: 780ms;
 }
 
@@ -2205,31 +2193,16 @@ code {
     }
 }
 
-/* ---------- reveal on scroll ---------- */
-.reveal {
-    opacity: 0;
-    transform: translateY(22px);
-    transition: opacity 640ms var(--ease-out), transform 640ms var(--ease-out);
-    transition-delay: var(--reveal-delay, 0ms);
-}
-
-.reveal.is-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
 
-    .rise,
-    .reveal {
+    .dc-msgs .rise {
         opacity: 1;
         transform: none;
         animation: none;
-        transition: none;
     }
 
     .dc-window {

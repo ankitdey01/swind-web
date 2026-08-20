@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { LINKS } from "@/app/lib/site";
-import { Reveal } from "./Reveal";
 import { PlusIcon } from "./Icons";
 
 const FAQS = [
@@ -76,12 +75,12 @@ export function Faq() {
   return (
     <section id="faq" className="section section--soft">
       <div className="container">
-        <Reveal className="section-head section-head--center">
+        <div className="section-head section-head--center">
           <h2>Quick answers.</h2>
-          <p>Everything people usually ask before hitting “Add to Discord”.</p>
-        </Reveal>
+          <p>Everything people usually ask before hitting "Add to Discord".</p>
+        </div>
 
-        <Reveal className="faq-list" delay={80}>
+        <div className="faq-list">
           {FAQS.map((item, i) => {
             const isOpen = open === i;
             return (
@@ -105,7 +104,7 @@ export function Faq() {
               </div>
             );
           })}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

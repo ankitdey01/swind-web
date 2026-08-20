@@ -1,12 +1,11 @@
 import { LINKS } from "@/app/lib/site";
-import { Reveal } from "./Reveal";
 import { PlusIcon } from "./Icons";
 
 export function Cta() {
   return (
     <section className="section">
       <div className="container">
-        <Reveal>
+        <div>
           <div className="cta-band">
             <div className="cta-band__inner">
               <div className="cta-band__eyebrow" aria-hidden>
@@ -30,7 +29,7 @@ export function Cta() {
               </a>
             </div>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Reveal } from "./Reveal";
 
 const STEPS = [
   {
@@ -30,17 +29,17 @@ export function HowItWorks() {
       <div className="container">
         <div className="how-grid">
           <div>
-            <Reveal className="section-head">
+            <div className="section-head">
               <h2>From invite to doorstep in four steps.</h2>
               <p>
                 No setup screens, no install guides. If you can run a slash
                 command, you can do this.
               </p>
-            </Reveal>
+            </div>
 
             <div className="steps">
               {STEPS.map((step, i) => (
-                <Reveal className="step" key={step.num} delay={i * 70}>
+                <div className="step" key={step.num}>
                   <span className="step__num" aria-hidden>
                     {step.num}
                   </span>
@@ -48,12 +47,12 @@ export function HowItWorks() {
                     <h3>{step.title}</h3>
                     <p>{step.body}</p>
                   </div>
-                </Reveal>
+                </div>
               ))}
             </div>
           </div>
 
-          <Reveal className="how-shot" delay={120}>
+          <div className="how-shot">
             <div className="how-shot__bar" aria-hidden>
               <i />
               <i />
@@ -71,7 +70,7 @@ export function HowItWorks() {
               <span>The real deal, running in a server.</span>
               <span className="live">Ordering live</span>
             </div>
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>
