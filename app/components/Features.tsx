@@ -1,37 +1,4 @@
-﻿import {
-  ShieldIcon,
-  CartIcon,
-  MessageIcon,
-  UsersIcon,
-  CheckIcon,
-  TrashIcon,
-} from "./Icons";
-
-const COMMANDS = [
-  { cmd: "/login", desc: "Link your Swiggy account" },
-  { cmd: "/authstatus", desc: "Check your session anytime" },
-  { cmd: "/logout", desc: "Disconnect when you want" },
-];
-
-const TILES = [
-  { emoji: "\u{1F95B}", label: "Milk", price: "\u20B927" },
-  { emoji: "\u{1F95A}", label: "Eggs", price: "\u20B996" },
-  { emoji: "\u{1F35E}", label: "Bread", price: "\u20B962" },
-  { emoji: "\u{1F9FB}", label: "Tissues", price: "\u20B945" },
-];
-
-const CART_LINES = [
-  { qty: "2\u00D7", name: "Amul Taaza milk", cost: "\u20B954" },
-  { qty: "1\u00D7", name: "Farm eggs", cost: "\u20B996" },
-  { qty: "1\u00D7", name: "Multigrain bread", cost: "\u20B962" },
-];
-
-const FOLKS = [
-  { initial: "a", bg: "#23a55a" },
-  { initial: "s", bg: "#f0b232" },
-  { initial: "r", bg: "#3b82f6" },
-  { initial: "m", bg: "#a855f7" },
-];
+﻿import { useId } from "react";
 
 export function Features() {
   return (
@@ -45,114 +12,145 @@ export function Features() {
           </p>
         </div>
 
-        <div className="feat-grid">
-          <div className="feat feat--wide">
-            <div className="feat__icon">
-              <ShieldIcon />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
+          {grid.map((feature) => (
+            <div
+              key={feature.title}
+              className="relative bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-900 dark:to-neutral-950 p-6 rounded-3xl overflow-hidden"
+            >
+              <Grid size={20} />
+              <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
+                {feature.title}
+              </p>
+              <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
+                {feature.description}
+              </p>
             </div>
-            <h3>Log in once. Order often.</h3>
-            <p>
-              A one-time, secure login links your Swiggy account to the bot.
-              Your password never touches the bot - Swiggy&apos;s own official
-              login handles it. After that, you&apos;re ready to order whenever
-              the craving hits.
-            </p>
-            <div className="feat__demo">
-              {COMMANDS.map((c) => (
-                <div className="mini-cmd" key={c.cmd}>
-                  <code>{c.cmd}</code>
-                  <span className="desc">{c.desc}</span>
-                  <span className="ok">
-                    <CheckIcon width={13} height={13} />
-                    {c.cmd === "/logout" ? "Done" : "Ready"}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="feat feat--narrow">
-            <div className="feat__icon">
-              <MessageIcon />
-            </div>
-            <h3>Instamart in the chat</h3>
-            <p>
-              Shop essentials the way you talk - fast, casual, right where the
-              conversation is. Pin the order, tag the server, move on.
-            </p>
-            <div className="feat__demo">
-              <div className="tile-row">
-                {TILES.map((t) => (
-                  <div className="tile" key={t.label}>
-                    <span className="emoji" aria-hidden>
-                      {t.emoji}
-                    </span>
-                    <span className="label">{t.label}</span>
-                    <span className="price">{t.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="feat feat--narrow">
-            <div className="feat__icon">
-              <CartIcon />
-            </div>
-            <h3>Your cart, your call</h3>
-            <p>
-              See what&apos;s in your Instamart cart, tweak quantities, and clear
-              it out - all without leaving the server.
-            </p>
-            <div className="feat__demo">
-              {CART_LINES.map((l) => (
-                <div className="cart-line" key={l.name}>
-                  <span className="qty">{l.qty}</span>
-                  <span className="name">{l.name}</span>
-                  <span className="cost">{l.cost}</span>
-                  <button
-                    type="button"
-                    className="del"
-                    aria-label={`Remove ${l.name}`}
-                  >
-                    <TrashIcon width={16} height={16} />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="feat feat--wide">
-            <div className="feat__icon">
-              <UsersIcon />
-            </div>
-            <h3>Built for the whole server</h3>
-            <p>
-              One person logs in, and the whole gang can chip in on a single
-              order - groceries for movie night, snacks for game night, or
-              emergency chai. It works in any server, from a 5-friend group to
-              a 5,000-member community.
-            </p>
-            <div className="feat__demo" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
-              <div className="avatar-stack" aria-hidden>
-                {FOLKS.map((f) => (
-                  <span className="av" style={{ background: f.bg }} key={f.initial}>
-                    {f.initial}
-                  </span>
-                ))}
-                <span className="av more">+1</span>
-              </div>
-              <span className="status-chip">
-                <span className="led" />
-                Sneha is ordering from #groceries
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
+const grid = [
+  {
+    title: "One-Time Secure Login",
+    description:
+      "Link your Swiggy account with a single secure auth. Your password never touches the bot - Swiggy's own official login handles it.",
+  },
+  {
+    title: "Instamart in the Chat",
+    description:
+      "Shop essentials the way you talk - fast, casual, right where the conversation is. Pin the order, tag the server, move on.",
+  },
+  {
+    title: "Your Cart, Your Call",
+    description:
+      "See what's in your Instamart cart, tweak quantities, and clear it out - all without leaving the Discord server.",
+  },
+  {
+    title: "Built for the Whole Server",
+    description:
+      "One person logs in, and the whole gang can chip in on a single order - groceries for movie night, snacks for game night, or emergency chai.",
+  },
+  {
+    title: "Works in Any Server",
+    description:
+      "From a 5-friend group to a 5,000-member community, the bot scales to fit your server. No minimums, no restrictions.",
+  },
+  {
+    title: "Slash-Command Simple",
+    description:
+      "Use /login, /order, /cart, and more. Commands you already know how to use, right inside the chat where you hang out.",
+  },
+  {
+    title: "Real-Time Order Tracking",
+    description:
+      "Watch your delivery status update live in the channel - from restaurant confirmation to the rider at your door.",
+  },
+  {
+    title: "No New Apps, No Tabs",
+    description:
+      "Everything happens inside Discord. No switching between apps, no copy-pasting addresses, no juggling browser tabs.",
+  },
+];
 
+const Grid = ({ size }: { size?: number }) => {
+  const pattern = [
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+  ];
+  return (
+    <div className="pointer-events-none absolute left-1/2 top-0 -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
+      <div className="absolute inset-0 bg-gradient-to-r from-zinc-100/30 to-zinc-300/30 dark:from-zinc-900/30 dark:to-zinc-900/30 opacity-100 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]">
+        <GridPattern
+          width={size ?? 20}
+          height={size ?? 20}
+          x="-12"
+          y="4"
+          squares={pattern}
+          className="absolute inset-0 h-full w-full mix-blend-overlay fill-black/10 stroke-black/10 dark:fill-white/10 dark:stroke-white/10"
+        />
+      </div>
+    </div>
+  );
+};
 
+function GridPattern({
+  width,
+  height,
+  x,
+  y,
+  squares,
+  ...props
+}: {
+  width: number;
+  height: number;
+  x: string;
+  y: string;
+  squares: number[][];
+  className?: string;
+}) {
+  const patternId = useId();
+
+  return (
+    <svg aria-hidden="true" {...props}>
+      <defs>
+        <pattern
+          id={patternId}
+          width={width}
+          height={height}
+          patternUnits="userSpaceOnUse"
+          x={x}
+          y={y}
+        >
+          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
+        </pattern>
+      </defs>
+      <rect
+        width="100%"
+        height="100%"
+        strokeWidth={0}
+        fill={`url(#${patternId})`}
+      />
+      {squares && (
+        <svg x={x} y={y} className="overflow-visible">
+          {squares.map(([x, y], i) => (
+            <rect
+              strokeWidth="0"
+              key={`${x}-${y}-${i}`}
+              width={width + 1}
+              height={height + 1}
+              x={x * width}
+              y={y * height}
+            />
+          ))}
+        </svg>
+      )}
+    </svg>
+  );
+}

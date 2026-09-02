@@ -1,4 +1,5 @@
 import { LINKS } from "@/app/lib/site";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import { DiscordMockup } from "./DiscordMockup";
 import { CheckIcon, DiscordIcon, PlusIcon, ShieldIcon, ClockIcon } from "./Icons";
 
@@ -18,7 +19,12 @@ export function Hero() {
 
             <h1>
               Order<span className="hero__mobile-break"><br /></span> groceries.{" "}
-              <span className="hl">Stay in the chat.</span>
+              <PointerHighlight
+                containerClassName="hl"
+                rectangleClassName="!bg-orange-500/85"
+              >
+                Stay in the chat.
+              </PointerHighlight>
             </h1>
 
             <p className="hero__sub">
